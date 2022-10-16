@@ -1,0 +1,215 @@
+---
+title: 'How to use Vim'
+date: '2022-10-13'
+tags: ['vim', 'NPM']
+draft: false
+author: 'hanii'
+summary: 'Vim is a classic text editor that saw its first incarnation in 1976. Used around the world across most platforms, the ability to drop into a computer, open a command prompt and type vim is a simple yet powerful concept.'
+---
+
+# Overview
+
+<TOCInline toc={props.toc} exclude="Overview" toHeading={2} />
+
+# Intro to Vim
+
+### Start vim
+
+You can start vim, by opening the terminal and by typing `vim`.
+
+### Command Mode
+
+You can enter commands with `:`
+
+### Exit vim
+
+Enter the command mode and type `quit` or `q` then press enter.
+
+_Note: With command more and the quit command you will have `:quit`._
+
+## Personal Comment
+
+Some operating systems don't come pre-installed with Vim, but come with `vi`. Vim means VI Improved, so all the commands learned in this course will work in `vi` as well.
+
+# Moving around in Vim
+
+## Moving in a file
+
+Moving inside vim is done by using a few specific keys: `H`, `J`, `K` and `L`
+
+Vim also provides a faster way to move the cursor. You can move through text word by word with the keys `W` and `B`
+
+## Keys
+
+- `J` moves the cursor down
+- `K` moves the cursor up
+- `L` moves the cursor right
+- `H` moves the cursor left
+- `W` moves the cursor forward one word at a time
+- `B` moves the cursor backwards one word at a time
+
+## Personal Comment
+
+You can also move by using the arrow keys, but as Mike mentioned in the video, the keys set for movement in vim, make it easier, since your hands don't need to travel that far.
+
+# Vim's different modes
+
+## Available Modes
+
+Vim has three available moves:
+
+- command mode (`--NORMAL--`)
+- insert mode (`--INSERT--`)
+- visual mode (`--VISUAL--`)
+
+## Command Mode
+
+This is the default mode that vim starts and where we write commands. You can see if you are in the command mode, by looking at the bottom bar and check if it says `--NORMAL--`.
+
+A command will always need to follow a `:`.
+
+To enter this mode, we need to press the `ESC` key.
+
+## Insert Mode
+
+This is the mode where we can insert text. You can see if you are in the insert mode, by looking at the bottom bar and check if it says `--INSERT`.
+
+To enter this mode, we need to press the `I` key.
+
+## Visual Mode
+
+This is the mode where we can select blocks of text. You can see if you are in visual mode, by looking at the bottom bar and check if it says `--VISUAL--`.
+
+To enter this mode, we need to press the `V` key.
+
+## Keys
+
+- `ESC` enter command mode
+- `I` enter insert mode
+- `V` enter visual mode
+
+# Saving Files in Vim
+
+## Saving Command
+
+To save a file we can activate the command mode by pressing `ESC` then use the command `:write` or `:w`.
+
+If we started vim without a file name, vim will give a `No File Name` error. But we can specify a filename and extension to save the file.
+
+### Example
+
+`:w my_file.txt` will save our contents inside the `my_file.txt`.
+
+# Vim's built-in commands
+
+# Keys combination
+
+- `D`-`W` to delete a word (stay in normal mode).
+- `C`-`W` to change a word (go into insert mode).
+
+# Combining Vim commands
+
+## Building commands
+
+Vim commands are built in three parts:
+
+- an action
+- a location
+- a second location (context)
+
+Vim sees tests as an object that can be manipulated.
+
+## Key Combo Trick
+
+- Delete text in between `<div>` tags by using the keys `C`-`I`-`T`.
+- Delete text inside quotation marks by using the keys `C`-`I`-`"`.
+
+# Copy and Paste inside of Vim
+
+## Keys
+
+- `Y` to copy/yank the selected text in visual mode
+- `D` to cut the selected text in visual mode
+- `DD` to cut the entire line
+- `P` to paste text from the cursor forward
+
+## Notes
+
+- Vim has its own clipboard, so copying or cutting text will not be added to the system clipboard
+- Deleting (key `D`) acts as cut
+- Copying text is called "yank"
+- Visual mode is extremely helpful if we want to do any sort of copy/paste of text
+
+# Configure VIM
+
+## Configure options
+
+- `:syntax on` enables syntax highlighting
+- `:set number` enable line numbers
+- `:set nonumber` disables line numbers
+- `:set relativenumber` enable relative line number
+- `:set norelativenumber` disables relative line number
+- `:help options` help text that will list all available options
+
+# The Vim Config file
+
+## Why use the Vim config file
+
+You probably don't want to type the options commands every time you start vim, so you can add all these options inside a single file called `.vimrc`.
+
+## Vimrc file
+
+You can set each option on each line of this file, for example:
+
+```vim
+1  set number
+2  set tabstop=2 shiftwidth=2 expandtab
+```
+
+## Turn tabs into spaces
+
+If you want to turn all tabs into spaces you can use the option `set tabstop=2 shiftwidth=2 expandtab`.
+
+## Links
+
+[MY .vimrc file](https://github.com/haani0090/my-configs)
+
+# Introduction to Vim Plugins
+
+## Why using plugin managers
+
+Makes it easier to add new plugins to vim and they will take care of updating them automatically.
+
+## Links
+
+- [Vim-plug](https://github.com/junegunn/vim-plug)
+- [Vim sensible](https://github.com/tpope/vim-sensible)
+
+## Install Vim Plug
+
+1. Download plug.vim by running curl on the terminal ([install guide](https://github.com/junegunn/vim-plug/blob/master/README.md#installation))
+2. Open your .vimrc with vim and add `call plug#begin('~/.vim/plugged')` to a line
+3. Install plugin by typing `Plug <github repo>`
+4. add `call plug#end()
+
+_Note: To install a plugin once added to the .vimrc we need reload .vimrc and call the command :PlugInstall inside vim._
+
+### Example
+
+In this example I'm using the Vim Plug installation steps to attempt to install the plugin [Vim sensible](https://github.com/tpope/vim-sensible).
+
+```vim
+call plug#begin('~/.vim/plugged')
+
+Plug 'https://github.com/tpope/vim-sensible.git'
+
+call plug#end()
+```
+
+- Then we can save the file with the command that we learned on [lesson 4](04-saving-files-in-vim.md) `:w`.
+
+- To reload the `.vimrc` file we can run the command `:source ~/vimrc`.
+
+- Run the command `:PlugInstall` to install the plugin.
+
+Keep Supporting us ❤️,

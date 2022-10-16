@@ -65,4 +65,4 @@ Don't forget to give the project a star! Thanks again!
 
 ## Licence
 
-[MIT](https://github.com/dlarroder/dalelarroder/blob/master/LICENSE) © [Dale Larroder](https://www.dalelarroder.com)
+[MIT](https://github.com/dlarroder/dalelarroder/blob/master/LICENSE) © 

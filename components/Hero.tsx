@@ -1,4 +1,4 @@
- import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { ReactElement, useContext, useEffect, useRef } from 'react'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
@@ -26,8 +26,8 @@ export default function Hero(): ReactElement {
   return (
     <div>
       <h1 className="sr-only">
-        Hello I'm Hanii, I'm a software engineer, a course creator, blogger and self-proclaimed
-        developer
+        Hello I'm Hanii, I'm a software engineer, a creative coder, blogger and self-proclaimed
+        developer.
       </h1>
       <motion.div
         className="relative z-10 flex h-[calc(100vh-81px)] md:h-[calc(100vh-116px)] items-center"
@@ -47,7 +47,7 @@ export default function Hero(): ReactElement {
                 </FadeUp>
                 <FadeUp duration={0.6} delay={0.2}>
                   <h2 className="font-medium opacity-80 text-3xl sm:text-6xl md:text-6xl xl:text-7xl">
-                    a course creator, blogger and self-proclaimed developer
+                    a creative coder, blogger and self-proclaimed developer.
                   </h2>
                 </FadeUp>
                 <FadeRight duration={0.5} delay={0.8}>

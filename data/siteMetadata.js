@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Hanii',
   author: 'Hanii',
   headerTitle: 'hanii',
-  description: 'Software Engineer',
+  description: 'Software Engineer,Course Creator',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: ' ',
@@ -12,7 +12,7 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: '24.hours.hanii@gmail.com',
   github: 'https://github.com/haani0090',
-  twitter: 'https://twitter.com/hanii986',
+  twitter: 'https://twitter.com/https.hanii',
   facebook: 'https://facebook.com/',
   linkedin: 'https://www.linkedin.com/in/im-hanii/',
   spotify: 'https://open.spotify.com/user/12162121994?si=e685b3546f414967',

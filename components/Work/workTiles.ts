@@ -20,9 +20,9 @@ export const workTiles: WorkTile[] = [
   },
   {
     description: 'I build',
-    title: 'Netflix Clone',
+    title: 'Rentoor',
     image: {
-      src: '/static/images/mathgame1.png',
+      src: '/static/rentoor.png',
       width: 600,
       height: 554,
     },
@@ -32,7 +32,7 @@ export const workTiles: WorkTile[] = [
     description: `I'm currently building`,
     title: 'nothanii',
     image: {
-      src: '/static/images/mathgame.png',
+      src: '/static/slickin .png',
       width: 600,
       height: 717,
     },
